@@ -8,17 +8,14 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 public class GridFragmento extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_grid,container,false);
-        GridView gridView = (GridView) view.findViewById(R.id.grill);
+        GridView gridView = (GridView) view.findViewById(R.id.grilla);
 
-        ArrayAdapter arrayAdapter = ArrayAdapter.createFromResource(getActivity(),R.array.countries, android.R.layout.simple_list_item_1);
+        ArrayAdapter arrayAdapter = ArrayAdapter.createFromResource(getActivity(),R.array.paises, android.R.layout.simple_list_item_1);
         gridView.setAdapter(arrayAdapter);
         return view;
     }
