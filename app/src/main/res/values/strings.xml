@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Countries</string>
+    <string name="app_name">Países</string>
     <string-array name="mode">
-        <item>List</item>
-        <item>Grill</item>
+        <item>Lista</item>
+        <item>Grilla</item>
     </string-array>
     <string-array name="countries">
         <item>Costa Rica</item>
