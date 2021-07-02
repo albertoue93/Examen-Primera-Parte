@@ -22,21 +22,20 @@ public class MainActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Fragment FragmentaSeleccionado = null;
+                Fragment FragmentoSeleccionado = null;
                 switch (position){
                     case 0:
-                        FragmentaSeleccionado = new ListFragmento();
+                        FragmentoSeleccionado = new ListFragmento();
                         break;
                     case 1:
-                        FragmentaSeleccionado = new GridFragmento();
+                        FragmentoSeleccionado = new GridFragmento();
                         break;
                 }
 
                 FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                if (FragmentaSeleccionado != null)
-                    fragmentTransaction.replace(R.id.fragment, FragmentaSeleccionado);
-                fragmentTransaction.commit();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.replace(R.id.fragment, FragmentoSeleccionado);
+                transaction.commit();
             }
 
             @Override
